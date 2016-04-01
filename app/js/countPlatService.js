@@ -1,8 +1,18 @@
 countPlatApp.factory('CountPlat',function ($resource) {
   
-  var numberOfVisitor = 1;
+  var numberOfVisitor = 2;
 
-  var employeeList = [];
+  // var employeeList = [];
+  var employeeList = [{
+    "id": 1,
+    "name": "Xin",
+    "numberofInterview": 3
+  },
+  {
+    "id": 2,
+    "name": "Big Xin",
+    "numberofInterview": 4
+  }];
 
   this.setNumberOfVistors = function(num) {
     numberOfVisitor = num;
@@ -12,19 +22,22 @@ countPlatApp.factory('CountPlat',function ($resource) {
     return numberOfVisitor;
   }
 
-  this.createEmployee = function(id, name, numberofInterview) {
-    employeeList.push({id: id; name: name; numberofInterview: numberofInterview});
+  this.addOneVisitor = function(){
+    numberOfVisitor += 1;
   }
 
+  this.removeOneVisitor = function(){
+    numberOfVisitor -= 1;
+  }
 
-  // TODO in Lab 5: Add your model code from previous labs
-  // feel free to remove above example code
-  // you will need to modify the model (getDish and getAllDishes) 
-  // a bit to take the advantage of Angular resource service
-  // check lab 5 instructions for details
+  this.createEmployee = function(id, name, numberofInterview) {
+    employeeList.push({"id": id, "name": name, "numberofInterview": numberofInterview});
+  }
 
-
-
+  this.getEmployeeList = function(){
+    return employeeList;
+  }
+  // console.log(this.getEmployeeList());
 
 
   // Angular service needs to return an object that has all the

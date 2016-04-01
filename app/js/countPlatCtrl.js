@@ -1,6 +1,6 @@
 countPlatApp.controller('CountPlatCtrl', function ($scope, CountPlat) {
 
-	$scope.numberOfVistors = CountPlat.getNumberOfVistors();
+	$scope.numberOfVisitors = CountPlat.getNumberOfVistors();
 
 	$scope.setNumberOfVistors = function(number){
 		CountPlat.setNumberOfVistors(number);
@@ -8,6 +8,10 @@ countPlatApp.controller('CountPlatCtrl', function ($scope, CountPlat) {
 
 	$scope.getNumberOfVistors = function() {
 		return CountPlat.getNumberOfVistors();
+	}
+
+	$scope.getEmployeeList = function(){
+		return CountPlat.getEmployeeList();
 	}
 
   // TODO in Lab 5: Implement the methods to get the dinner menu
