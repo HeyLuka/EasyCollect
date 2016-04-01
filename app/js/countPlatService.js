@@ -1,6 +1,6 @@
 countPlatApp.factory('CountPlat',function ($resource) {
   
-  $scope.numberOfVisitor = 2;
+  var numberOfVisitor = 2;
 
   // var employeeList = [];
   var employeeList = [{
