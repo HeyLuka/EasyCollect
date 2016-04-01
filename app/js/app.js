@@ -9,7 +9,7 @@
 // has other core modules that you might want to use and explore when you go deeper
 // into developing Angular applications. For this lab, these two will suffice.
 // var dinnerPlannerApp = angular.module('dinnerPlanner', ['ngRoute','ngResource']);
-var countPlatApp = angular.module('countPlat', ['ngRoute','ngResource']);
+var countPlatApp = angular.module('countPlat', ['ngRoute','ngResource','firebase']);
 
 
 // Here we configure our application module and more specifically our $routeProvider. 

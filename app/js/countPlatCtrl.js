@@ -1,4 +1,15 @@
-countPlatApp.controller('CountPlatCtrl', function ($scope, CountPlat) {
+countPlatApp.controller('CountPlatCtrl', function ($scope, $firebaseObject, CountPlat) {
+
+	var ref = new Firebase("https://glowing-heat-1407.firebaseio.com");
+
+	// $scope.data = $firebaseObject(ref);
+
+	// download the data into a local object
+	var syncObject = $firebaseObject(ref);
+
+	// synchronize the object with a three-way data binding
+	// click on 'index.html' above to see it used in the DOM
+	syncObject.$bindTo($scope, "data");
 
 	$scope.numberOfVisitors = CountPlat.getNumberOfVistors();
 
