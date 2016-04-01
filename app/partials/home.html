@@ -52,7 +52,7 @@ looks a bit nicer. -->
 
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,7 +60,6 @@ looks a bit nicer. -->
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Carousel Template for Bootstrap</title>
 
@@ -122,7 +121,7 @@ looks a bit nicer. -->
           <img class="first-slide" src="../../images/slide-logo.JPG" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1><code>10298</code> People is here attending the activity!</h1>
+              <h1><code>{{ numberOfVisitors }}</code> People is here attending the activity!</h1>
               <p>This activity is sdadadadaffajshkajhsdkaduyweqewqln </p>
              
             </div>
@@ -196,6 +195,13 @@ looks a bit nicer. -->
      IE10 viewport hack for Surface/desktop Windows 8 bug>
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
   </body>
-</html>
 
 
+
+<!--
+numberOfVisitors: {{numberOfVisitors}}
+employee: 
+<ul ng-repeat="each in getEmployeeList()">
+	<li>name: {{each.name}}</li>
+</ul>
+-->
