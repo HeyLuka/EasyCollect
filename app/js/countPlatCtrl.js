@@ -37,7 +37,7 @@ countPlatApp.controller('CountPlatCtrl', function ($scope, $firebaseArray, $fire
 	// var talkingQuery = ref.child("talkingList").orderByChild("time").limitToLast(25);
 
 	// $scope.talkingList = $firebaseArray(ref.child("talkingList"));
-	$scope.talkingList = $firebaseArray(ref.child("talkingList").orderByChild("time").limitToLast(25));
+	$scope.talkingList = $firebaseArray(ref.child("talkingList").orderByChild("time").limitToLast(5));
 
 	// $scope.numberOfVisitors = CountPlat.getNumberOfVisitors();
 	$scope.numberOfVisitors = CountPlat.getNumberOfVisitors();
