@@ -19,15 +19,25 @@ countPlatApp.controller('CountPlatCtrl', function ($scope, $firebaseArray, $fire
 
 	var syncArray = $firebaseArray(ref.child("employeeList"));
 
+	// $scope.getEmployeeName = function(id){
+	// 	// var query = $firebase
+	// 	var thisEmployee = $firebaseArray(ref.child("employeeList").orderByChild("id").equalTo(id));
+	// 	return;
+	// }
+
 	// synchronize the object with a three-way data binding
 	// click on 'index.html' above to see it used in the DOM
 	// syncObject.$bindTo($scope, "data");
 	// syncArray.$bindTo($scope, "arraydata");
 	$scope.message = $firebaseArray(ref.child("employeeList"));
+	$scope.testname = $firebaseArray(ref.child("employeeList").orderByChild("id").equalTo(2));
 
 	$scope.visitorList = $firebaseArray(ref.child("visitors"));
 
-	$scope.talkingList = $firebaseArray(ref.child("talkingList"));
+	// var talkingQuery = ref.child("talkingList").orderByChild("time").limitToLast(25);
+
+	// $scope.talkingList = $firebaseArray(ref.child("talkingList"));
+	$scope.talkingList = $firebaseArray(ref.child("talkingList").orderByChild("time").limitToLast(25));
 
 	// $scope.numberOfVisitors = CountPlat.getNumberOfVisitors();
 	$scope.numberOfVisitors = CountPlat.getNumberOfVisitors();

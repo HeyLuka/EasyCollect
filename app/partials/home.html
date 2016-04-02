@@ -1,9 +1,6 @@
-test message:
-<!-- {{data}} -->
-
-<pre>{{message | json}}</pre>
-
-<p>number of visitors: <span>{{getNumberOfVisitors()}}</span></p>
+    
+    <p>test message</p>
+    <p>{{getEmployeeName(2)}}</p>
 
     <!-- Carousel
     ================================================== -->
@@ -44,9 +41,9 @@ test message:
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4" ng-repeat="employee in message">
-        	<img class="img-thumbnail" src="images/staff-1.jpg" alt="Generic placeholder image" width="140" height="140">
+        	<img class="img-thumbnail" src="images/profile-{{employee.name}}.jpg" alt="Generic placeholder image" width="140" height="140">
         	<h2>{{employee.name}}&nbsp;&nbsp;<span class="h4">{{employee.title}}</span></h2>
-        	<p style="height: 48px; text-align: left;">{{employee.description}}</p>
+        	<p style="height: 48px; text-align: left; margin-left: 10%;">{{employee.description}}</p>
 	        <!-- <p><a class="btn btn-default" href="#" role="button">More details &raquo;</a></p> -->
 	        <p>popularity: {{employee.popularity}}</p>
           <!-- <img class="img-thumbnail" src="images/staff-1.jpg" alt="Generic placeholder image" width="140" height="140">
@@ -83,11 +80,12 @@ test message:
                         </div> -->
                         <div class="feed-element">
                             <a href="profile.html" class="pull-left">
-                                <img alt="image" class="img-circle" src="images/staff-1.jpg">
+                                <!-- <img alt="image" class="img-circle" src="images/staff-1.jpg"> -->
+                                <img alt="image" class="img-circle" src="images/profile-{{talking.employee_id}}.jpg">
                             </a>
                             <div class="media-body ">
                                 <small class="pull-right">{{talking.time}}</small>
-                                <strong>{{talking.visitorName}}</strong> talked with <strong>{{talking.employeeName}}</strong> <br>
+                                <strong>{{talking.name}}</strong> talked with Employee <strong>{{talking.employee_id}}</strong> <br>
                                 <!-- <small class="text-muted">Today 5:60 pm - 12.06.2014</small> -->
 
                             </div>
