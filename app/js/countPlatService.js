@@ -14,11 +14,11 @@ countPlatApp.factory('CountPlat',function ($resource) {
     "numberofInterview": 4
   }];
 
-  this.setNumberOfVistors = function(num) {
+  this.setNumberOfVisitors = function(num) {
     numberOfVisitor = num;
   }
 
-  this.getNumberOfVistors = function() {
+  this.getNumberOfVisitors = function() {
     return numberOfVisitor;
   }
 

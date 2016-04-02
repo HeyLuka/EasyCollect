@@ -20,14 +20,16 @@ countPlatApp.controller('CountPlatCtrl', function ($scope, $firebaseArray, $fire
 	// syncArray.$bindTo($scope, "arraydata");
 	$scope.message = $firebaseArray(ref.child("employeeList"));
 
-	$scope.numberOfVisitors = CountPlat.getNumberOfVistors();
+	// $scope.numberOfVisitors = CountPlat.getNumberOfVisitors();
+	$scope.numberOfVisitors = CountPlat.getNumberOfVisitors();
 
-	$scope.setNumberOfVistors = function(number){
-		CountPlat.setNumberOfVistors(number);
+	$scope.setNumberOfVisitors = function(number){
+		CountPlat.setNumberOfVisitors(number);
 	}
 
-	$scope.getNumberOfVistors = function() {
-		return CountPlat.getNumberOfVistors();
+	$scope.getNumberOfVisitors = function() {
+		// return CountPlat.getNumberOfVisitors();
+		return $scope.message.length;
 	}
 
 	$scope.getEmployeeList = function(){
