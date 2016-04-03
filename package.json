@@ -1,8 +1,8 @@
 {
   "version": "0.0.0",
-  "private": true,
-  "name": "count-planner",
-  "description": "A starter project for Interaction Programming course Lab5",
+  "private": false,
+  "name": "count-platform",
+  "description": "page mainly for showing the current number of visitors and recent talking activities in a specific event."
   "repository": "https://github.com/HeyLuka/EasyCollect.git",
   "license": "MIT",
   "devDependencies": {
