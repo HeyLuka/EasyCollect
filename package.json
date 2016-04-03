@@ -2,7 +2,7 @@
   "version": "0.0.0",
   "private": false,
   "name": "count-platform",
-  "description": "page mainly for showing the current number of visitors and recent talking activities in a specific event."
+  "description": "page mainly for showing the current number of visitors and recent talking activities in a specific event.",
   "repository": "https://github.com/HeyLuka/EasyCollect.git",
   "license": "MIT",
   "devDependencies": {
